@@ -1,0 +1,7 @@
+name: IncBossesAbility_BossBar
+version: '1.0'
+main: ru.incrementstudio.incbosses.abilities.incbossesability_bossbar.Main
+api-version: '1.16'
+author: IncrementStudio++
+description: Способность для плагина IncBosses, добавляющая возможность настройки боссбара для босса!
+website: incrementstudio.ru
