@@ -22,15 +22,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Ability extends AbilityBase {
-    private double radius;
-    private String title;
-    private BossBar bossBar;
+    private final double radius;
+    private final BossBar bossBar;
     private BukkitTask task;
 
     public Ability(Boss boss, Phase phase, FileConfiguration bossConfig, ConfigurationSection abilityConfig) {
         super(boss, phase, bossConfig, abilityConfig);
         radius = abilityConfig.contains("radius") ? abilityConfig.getDouble("radius") : 10;
-        title = abilityConfig.contains("title") ? abilityConfig.getString("title")
+        String title = abilityConfig.contains("title") ? abilityConfig.getString("title")
                 .replace("%boss-name%", boss.getData().getBossName())
                 .replace("%phase-name%", phase.getData().getPhaseName())
                 : boss.getData().getBossName();
