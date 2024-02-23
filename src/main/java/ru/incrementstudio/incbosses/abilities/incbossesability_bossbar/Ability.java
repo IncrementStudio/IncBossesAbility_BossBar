@@ -52,6 +52,10 @@ public class Ability extends AbilityBase {
                     if (!players.contains(player))
                         bossBar.removePlayer(player);
                 }
+                for (Player player : players) {
+                    if (!bossBar.getPlayers().contains(player))
+                        bossBar.addPlayer(player);
+                }
             }
         }.runTaskTimer(Main.getInstance(), 0L, 5L);
     }
